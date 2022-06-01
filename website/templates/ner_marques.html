@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+NER Marques
+{% endblock %}
+
+{% block content %}
+{% if page == 2 %}
+{{ spacy_render|safe }}
+{% endif %}
+<p>Entrez votre texte:</p>
+<form method="POST">
+	<textarea rows="5" cols="60" name="text" placeholder="Entrez votre texte ici" required=True></textarea>
+    <p><input type="submit" value="Submit"></p>
+</form>
+{% endblock %}
